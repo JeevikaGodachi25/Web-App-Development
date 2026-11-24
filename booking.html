@@ -43,9 +43,9 @@
                 <label for="stand">Select Stand:</label>
                 <select id="stand" name="stand" required>
                     <option value="">Choose a Stand</option>
-                    <option value="General">General</option>
-                    <option value="Premium">Premium</option>
-                    <option value="VIP">VIP</option>
+                    <option value="800">General - ₹800</option>
+                    <option value="1500">Premium - ₹1500</option>
+                    <option value="3000">VIP - ₹3000</option>
                 </select>
 
                 <br><br>
@@ -135,6 +135,15 @@
                 <button type="reset">Reset Form</button>
 
             </form>
+            <div class="booking-summary">
+            <h2>Booking Summary</h2>
+
+            <p>Match: <span id="summaryMatch">Not selected</span></p>
+            <p>Stand: <span id="summaryStand">Not selected</span></p>
+            <p>Quantity: <span id="summaryQuantity">1</span></p>
+
+            <h3>Total Price: ₹<span id="totalPrice">0</span></h3>
+            </div>
 
         </section>
     </main>
