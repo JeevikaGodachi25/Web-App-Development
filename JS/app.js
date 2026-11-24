@@ -88,3 +88,52 @@ document.addEventListener("DOMContentLoaded", function () {
     quantityInput.addEventListener("change", updateSummary);
 
 });
+// Activity 8: Responsive Layout
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Team Filter
+    const teamFilter = document.getElementById("team");
+    const matchCards = document.querySelectorAll(".match-card");
+
+    if (teamFilter) {
+        teamFilter.addEventListener("change", function () {
+            const selectedTeam = teamFilter.value;
+
+            matchCards.forEach(function (card) {
+                const teams = card.dataset.teams.split(" ");
+
+                card.style.display =
+                    selectedTeam === "all" || teams.includes(selectedTeam)
+                    ? "block"
+                    : "none";
+            });
+        });
+    }
+
+    // Grid and List View
+    const matchContainer = document.getElementById("matchCards");
+    const gridView = document.getElementById("gridView");
+    const listView = document.getElementById("listView");
+
+    if (matchContainer && gridView && listView) {
+        gridView.addEventListener("click", function () {
+            matchContainer.classList.remove("list-view");
+        });
+
+        listView.addEventListener("click", function () {
+            matchContainer.classList.add("list-view");
+        });
+    }
+
+    // Hamburger Menu
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener("click", function () {
+            mainNav.classList.toggle("active");
+        });
+    }
+
+});
