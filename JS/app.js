@@ -1,3 +1,4 @@
+
 // Reusable Toast Notification Function
 
 function showToast(message) {
@@ -23,25 +24,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
     bookButtons.forEach(function(button) {
 
-        button.addEventListener("click", function(event) {
+        button.addEventListener("click", function() {
 
-            event.preventDefault();
-
-            const bookingSection = document.getElementById("booking");
-
-            if (bookingSection) {
-
-                bookingSection.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-                showToast("Booking form opened successfully!");
-
-            }
+            // Navigate to booking page
+            // Booking page will show the toast and scroll to form
 
         });
 
     });
+
+    // Check whether booking page was opened
+    if (window.location.hash === "#booking") {
+
+        const bookingSection = document.getElementById("booking");
+
+        if (bookingSection) {
+
+            bookingSection.scrollIntoView({
+                behavior: "smooth"
+            });
+
+            showToast("Booking form opened successfully!");
+
+        }
+    }
 
 });
 

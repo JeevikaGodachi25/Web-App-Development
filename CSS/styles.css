@@ -203,3 +203,14 @@ button[type="submit"] {
 button[type="reset"] {
     background-color: var(--primary);
 }
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px 25px;
+    border-radius: 8px;
+    z-index: 2000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
