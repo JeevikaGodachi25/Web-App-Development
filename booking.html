@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking Form</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>IPL Ticket Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#matches">Matches</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="booking">
+
+            <h2>Book Your Tickets</h2>
+
+            <form id="bookingForm">
+
+                <!-- Match Selection -->
+                <label for="match">Select Match:</label>
+                <select id="match" name="match" required>
+                    <option value="">Choose a Match</option>
+                    <option value="RCB vs CSK">RCB vs CSK</option>
+                    <option value="MI vs KKR">MI vs KKR</option>
+                    <option value="CSK vs MI">CSK vs MI</option>
+                </select>
+
+                <br><br>
+
+                <!-- Stand Category -->
+                <label for="stand">Select Stand:</label>
+                <select id="stand" name="stand" required>
+                    <option value="">Choose a Stand</option>
+                    <option value="General">General</option>
+                    <option value="Premium">Premium</option>
+                    <option value="VIP">VIP</option>
+                </select>
+
+                <br><br>
+
+                <!-- Number of Tickets -->
+                <label for="quantity">Number of Tickets:</label>
+                <input type="number"
+                       id="quantity"
+                       name="quantity"
+                       min="1"
+                       max="5"
+                       required>
+
+                <br><br>
+
+                <!-- Name -->
+                <label for="name">Full Name:</label>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your name"
+                       minlength="3"
+                       maxlength="40"
+                       required>
+
+                <br><br>
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+
+                <br><br>
+
+                <!-- Phone -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       placeholder="Enter 10 digit number"
+                       pattern="[6-9][0-9]{9}"
+                       minlength="10"
+                       maxlength="10"
+                       required>
+
+                <br><br>
+
+                <!-- Radio Buttons -->
+                <p>Booking Preference:</p>
+
+                <input type="radio"
+                       id="emailUpdate"
+                       name="preference"
+                       value="Email"
+                       required>
+
+                <label for="emailUpdate">Email Updates</label>
+
+                <input type="radio"
+                       id="smsUpdate"
+                       name="preference"
+                       value="SMS">
+
+                <label for="smsUpdate">SMS Updates</label>
+
+                <br><br>
+
+                <!-- Checkbox -->
+                <input type="checkbox"
+                       id="terms"
+                       name="terms"
+                       value="accepted"
+                       required>
+
+                <label for="terms">
+                    I agree to the booking guidelines.
+                </label>
+
+                <br><br>
+
+                <!-- Buttons -->
+                <button type="submit">Submit Booking</button>
+
+                <button type="reset">Reset Form</button>
+
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 IPL Ticket Booking</p>
+    </footer>
+
+</body>
+</html>
+<script>
+    const form = document.getElementById("bookingForm");
+
+    form.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        alert("Your form is valid! Booking submitted successfully.");
+
+    });
+</script>
