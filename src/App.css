@@ -1,0 +1,136 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f7f2;
+  color: #222;
+}
+
+nav {
+  background: #010928;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav p {
+  word-spacing: 10px;
+}
+
+section {
+  background: #ff860d;
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+section button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 25px;
+  color: #222;
+}
+
+.matches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 25px;
+}
+
+.match-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  background: #010928;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking-form {
+  background: white;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.booking-form input {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .matches {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fix match card visibility */
+.matches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  padding: 25px 5%;
+}
+
+.match-card {
+  background-color: white;
+  color: #111827;
+  padding: 25px;
+  border-radius: 12px;
+  min-height: 200px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.match-card h3 {
+  color: #111827;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.match-card p {
+  color: #333333;
+  margin: 10px 0;
+}
+
+.match-card button {
+  background-color: #050b2c;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.match-card button:hover {
+  background-color: #ff6b00;
+}
+
