@@ -134,3 +134,17 @@ button {
   background-color: #ff6b00;
 }
 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+.navbar a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
